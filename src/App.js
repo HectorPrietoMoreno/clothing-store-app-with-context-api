@@ -12,7 +12,6 @@ import Header from './components/header/header.component';
 
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 
-
 import CurrentUserContext from './contexts/current-user/current-user.context';
 
 class App extends React.Component {
@@ -52,7 +51,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <CurrentUserContext.Provider value ={this.state.currentUser}>
+        <CurrentUserContext.Provider value={this.state.currentUser}>
           <Header />
         </CurrentUserContext.Provider>
         <Switch>
@@ -66,8 +65,8 @@ class App extends React.Component {
               this.state.currentUser ? (
                 <Redirect to='/' />
               ) : (
-                  <SignInAndSignUpPage />
-                )
+                <SignInAndSignUpPage />
+              )
             }
           />
         </Switch>
@@ -75,6 +74,5 @@ class App extends React.Component {
     );
   }
 }
-
 
 export default App;

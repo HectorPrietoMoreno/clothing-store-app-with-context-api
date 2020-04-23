@@ -8,3 +8,4 @@ Rewrite the global state management instead of using Redux using Context API
 - useContext Hook
 - Provider
 - Consumer
+- Provider Context Pattern
